@@ -1,0 +1,25 @@
+<%layout("/Layouts/boilerplate")-%>
+<br>
+<body>
+
+    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+      <%for(let val of data) {%>
+        <a href="/Listings/<%=val._id%>" class="list-link">
+          
+        <div class="card" >
+            <img class="card-img-top" src="<%=val.image.url%>" alt="listing image" style="height: 22rem;">
+            <div class="card-img-overlay"></div>
+            <div class="card-body">
+              <p class="card-text"><b><%=val.title%></b><br>
+               &#8377;<%=val.price.toLocaleString("en-IN")%>/night
+               <i class = "gst"> &nbsp; &nbsp; +18%GST</i>
+              </p>
+            </div>
+          </div>
+        </a>
+    <%}%>
+  
+  </div>
+   
+
+</body>
