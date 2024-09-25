@@ -29,7 +29,7 @@ const app = express();
 const Listing = require("./Models/Listing");
 const Review = require("./Models/Review.js");
 const User = require("./Models/User.js");
-const { log } = require("console");
+
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
