@@ -63,14 +63,20 @@
 
           <% if (listing.category === "Beaches") { %>
             <option value="Beaches" selected>Beaches</option>
+            <option value="Mountains">Mountains</option>
+            <option value="Rooms">Rooms</option>
         <% } %>
         
         <% if (listing.category === "Mountains") { %>
-            <option value="Mountains" selected>Mountains</option>
+          <option value="Beaches">Beaches</option>
+          <option value="Mountains" selected>Mountains</option>
+          <option value="Rooms">Rooms</option>
         <% } %>
 
         <% if (listing.category === "Rooms") { %>
-            <option value="Rooms" selected>Rooms</option>
+          <option value="Beaches">Beaches</option>
+          <option value="Mountains" >Mountains</option>
+          <option value="Rooms" selected >Rooms</option>
         <% } %>
 
       </select>

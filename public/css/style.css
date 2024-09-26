@@ -8,6 +8,7 @@ body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
 
 }
+
 #filters {
     height: 7rem;
     margin: 1.4rem 0 2rem 0;
@@ -20,18 +21,19 @@ body {
 
 .filter {
     text-align: center;
-    padding: .6rem;
+    padding: .4rem;
     border-radius: 10px;
     background-color: #f0f0f5;
     transition: background-color 0.3s, box-shadow 0.3s ease;
-    width: 150px; 
+    width: 130px; 
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .filter i {
     font-size: 24px;
-    color: #6c757d; 
+    color: #6c757d;
+    margin-top:10px; 
     transition: color 0.3s ease;
 }
 
@@ -157,6 +159,8 @@ body {
 
 
 
+
+
 .content {
     flex: 1; /* Takes remaining space to push footer down */
 }
@@ -177,6 +181,24 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+     
+}
+
+.f-social i {
+    color: #f8f9fa; /* Icon color */
+    font-size: 2rem;
+    transition: color 0.3s ease;
+    margin-right: 10px;
+   
+}
+.f-social>a
+{
+    text-decoration: none;
+
+}
+
+.f-social i:hover {
+    color: #ffc107; /* Change color on hover */
 }
 
 
@@ -220,14 +242,15 @@ body {
 
 .anchor {
     margin-top: 0.5rem;
+    
 }
 
-.anchor a {
+/* .anchor a {
     color: #f8f9fa;
     text-decoration: none;
-    font-weight: 500;
+    font-weight: 400;
     transition: color 0.3s ease-in-out;
-}
+} */
 
 .anchor a:hover {
     color: #ffc107;
@@ -398,12 +421,12 @@ form .mb-3:nth-child(3) {
     animation-delay: 0.4s;
 }
 .tax-toggle {
-    margin-left: 20rem;
-    padding: 15px;
+    margin-left: 20.5rem;
+    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     color: #444;
     border: 2px solid #ddd;
     border-radius: 10px;
@@ -426,7 +449,7 @@ form .mb-3:nth-child(3) {
 }
 
 .form-check-input {
-    width: 50px;
+    width: 60px;
     height: 30px;
     appearance: none;
     background-color: #ccc;
@@ -500,4 +523,84 @@ form .mb-3:nth-child(3) {
 .anchor
 {
     text-decoration: none;
+}
+
+h1 > u {
+    margin-top: 1rem;
+    color: #007bff; /* Blue for contrast */
+    font-weight: bold;
+    position: relative;
+    display: inline-block; /* Add this */
+    animation: float 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+    text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+}
+
+/* Floating animation */
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px); /* Make the floating more noticeable */
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Glowing effect */
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.2);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(0, 123, 255, 1), 0 0 30px rgba(0, 123, 255, 0.6);
+    }
+    100% {
+        text-shadow: 0 0 5px rgba(0, 123, 255, 0.5), 0 0 10px rgba(0, 123, 255, 0.2);
+    }
+}
+
+
+
+
+
+.welcome
+{
+    display: flex;
+}
+
+
+
+.typewriter {
+    margin-top: 1rem;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ff9800; /* Soft orange for elegance */
+    display: inline-block;
+    margin-left: 34rem; /* Adjusted for better centering */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow for depth */
+}
+
+.typing {
+    animation: typing 4s steps(22) infinite, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%; /* Controls how much of the text is shown */
+    }
+}
+
+@keyframes blink-caret {
+    0%, 100% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: #ff9800; /* Matches the text color */
+    }
 }

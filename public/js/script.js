@@ -32,3 +32,30 @@ priceToggle.addEventListener("change", () => {
 });
 
 
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const text = "@QUESTNEST";
+  const container = document.querySelector(".typewriter");
+  let index = 0;
+
+  // Clear the content before starting the typing effect
+  container.textContent = '';
+
+  function typeEffect() {
+      if (index < text.length) {
+          container.textContent += text.charAt(index);
+          index++;
+          setTimeout(typeEffect, 100); // Delay between each letter
+      } else {
+          setTimeout(() => {
+              container.textContent = ''; // Reset text after it's fully displayed
+              index = 0;
+              typeEffect();
+          }, 2500); // Delay before repeating
+      }
+  }
+
+  typeEffect(); // Start the typing effect
+});

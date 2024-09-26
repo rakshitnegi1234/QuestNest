@@ -116,17 +116,13 @@ const validatereview = (req, res, next) => {
   } else return next(); 
 };
 
-
-
-
-
-  app.use((req,res,next)=>
-  {
-       res.locals.currUser =  req.user;
-       res.locals.success = req.flash("success");
-       res.locals.error = req.flash("error");
-       return next();
-  });
+app.use((req, res, next) => {
+  console.log('Current User:', req.user);  // Debugging line
+  res.locals.currUser = req.user;
+  res.locals.success = req.flash("success");
+  res.locals.error = req.flash("error");
+  next();
+});
 
 
  // Listing/Review/User Model
@@ -134,6 +130,7 @@ const validatereview = (req, res, next) => {
  app.use("/Listings",lis_g);
  app.use("/Listings/:id/Reviews",rev_g);
  app.use("/",user_g);
+
 
      // Specific Listing Category
 
